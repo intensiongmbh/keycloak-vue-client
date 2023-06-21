@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  vue-client:
+    container_name: vue-client
+    build: .
+    network_mode: host
+    environment:
+      AUTH_SERVER_URL: "http://localhost:18080/auth"
+      AUTH_REALM: "test"
+      AUTH_CLIENT_ID: "vue-client"
